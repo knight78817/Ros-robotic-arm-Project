@@ -16,6 +16,7 @@ crw-rw-rw-  1 root dialout 166,     0 10月 14 20:19 ttyACM0
 crw-------     1 root root          5,     3 10月 14 17:05 ttyprintk
 
 由這個網站發現我其實沒有把usb的一些權限打開
+
 https://forum.dobot.cc/t/invalid-port-name-or-dobot-is-occupied-by-other-application/671
 
 
@@ -53,3 +54,7 @@ Press Shift to move faster
 terminal有反應但是手臂沒有反應
 
 所以目前先去用windows的看看能不能先讓手臂動起來
+
+先用arduino試試能不能通過tx rx控制
+
+https://cn.dobot.cc/tutorial/2224.html
