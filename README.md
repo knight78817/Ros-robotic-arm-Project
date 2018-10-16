@@ -17,6 +17,8 @@ crw-------     1 root root          5,     3 10月 14 17:05 ttyprintk
 
 由這個網站發現我其實沒有把usb的一些權限打開
 
+sudo chmod a+rw /dev/ttyUSB0
+
 https://forum.dobot.cc/t/invalid-port-name-or-dobot-is-occupied-by-other-application/671
 
 
