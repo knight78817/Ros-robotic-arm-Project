@@ -58,3 +58,46 @@ terminal有反應但是手臂沒有反應
 先用arduino試試能不能通過tx rx控制
 
 https://cn.dobot.cc/tutorial/2224.html
+
+測試之後還是不行
+
+///
+
+20181016
+找到下方的網站（V1）的版本
+
+https://www.dobot.cc/downloadcenter/dobot-arm-v1.html?sub_cat=100#sub-download
+
+其中有下載到資料夾DobotTools_opensource
+
+DobotClient
+DobotDownloadUtil
+DobotServer
+
+原本以爲需要在windows下才能編譯
+而裏面都有 *.pro檔案
+
+https://stackoverflow.com/questions/1368512/what-is-the-purpose-of-the-pro-file
+https://doc.qt.io/archives/3.3/qmake-manual-3.html
+
+而*.pro檔案可以使用 “qmake”指令產生makefile
+再下make指令就可以編譯
+但是編譯時候有error，由於沒有qt的問題
+
+[
+howder@howder-UP-CHT01:~/下載/DobotTools_opensource/DobotDownloadUtil$ make
+g++ -c -m64 -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -o MainWindow.o src/MainWindow.cpp
+src/MainWindow.cpp:21:21: fatal error: QtWidgets: 沒有此一檔案或目錄
+ #include <QtWidgets>
+                     ^
+compilation terminated.
+Makefile:231: recipe for target 'MainWindow.o' failed
+make: *** [MainWindow.o] Error 1
+]
+ 
+ 因此我去安裝qt
+ 
+ https://www.linuxidc.com/Linux/2017-03/141553.htm
+ 
+ http://download.qt.io/archive/qt/5.10/5.10.1/
+
