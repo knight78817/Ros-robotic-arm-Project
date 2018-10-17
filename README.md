@@ -102,4 +102,40 @@ make: *** [MainWindow.o] Error 1
  https://www.linuxidc.com/Linux/2017-03/141553.htm
  
  http://download.qt.io/archive/qt/5.10/5.10.1/
+ 
+ 後來希望可以使用qt來run  ros
+
+參考下方網站
+
+ https://hk.saowen.com/a/72f943fa536fc1271f55ab86e14f22c519bb0e9e80a7e3ddfbda50bbbec6a81d
+
+ howder@howder-UP-CHT01:~$ sudo add-apt-repository ppa:beineri/opt-qt-5.10.1-trusty
+
+ howder@howder-UP-CHT01:~$ sudo add-apt-repository ppa:levi-armstrong/ppa
+
+ sudo apt-get update
+ 
+ sudo apt-get install qt57creator-plugin-ros
+ 
+出现错误
+
+https://zhuanlan.zhihu.com/p/34900332
+
+下列软件包有未满足的依赖关系： qt57creator-plugin-ros : 依赖: libqtermwidget59-0 (>=
+0.6.1) 但是它将不会被安装 E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。
+解决办法
+
+sudo apt-get update
+sudo apt install qt59creator
+sudo apt-get install qt57creator-plugin-ros
+
+所以安裝 qt59版本可能比較好
+
+接下來繼續安裝，按照下方網站
+
+https://blog.csdn.net/ZhangRelay/article/details/52214411?utm_source=blogxgwz2
+
+操作可以看下方鏈接，“非常實用！！！”
+
+https://blog.csdn.net/u013453604/article/details/52186375
 
